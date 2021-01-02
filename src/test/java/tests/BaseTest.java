@@ -13,9 +13,6 @@ public abstract class BaseTest {
 
     @BeforeAll
     static void setup() {
-        addListener("AllureSelenide", new AllureSelenide());
-        Configuration.startMaximized = true;
-
         BrowserConfig config = ConfigFactory.create(BrowserConfig.class);
 
         if ("remote".equals(System.getProperty("browser.type"))) {
@@ -28,5 +25,8 @@ public abstract class BaseTest {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+        Configuration.startMaximized = true;
+
+        addListener("AllureSelenide", new AllureSelenide());
     }
 }

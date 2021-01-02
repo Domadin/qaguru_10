@@ -44,3 +44,13 @@ test {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 }
+
+task testRemote(type: Test) {
+    systemProperty("browser.type", "remote")
+    useJUnitPlatform()
+}
+
+task testLocal(type: Test) {
+    systemProperty("browser.type", "local")
+    useJUnitPlatform()
+}
