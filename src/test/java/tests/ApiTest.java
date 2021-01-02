@@ -2,12 +2,12 @@ package tests;
 
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Test;
-import properties.ApiProperties;
+import configs.ApiConfig;
 
 public class ApiTest {
     @Test
     void test() {
-        ApiProperties props = ConfigFactory.create(ApiProperties.class);
+        ApiConfig props = ConfigFactory.create(ApiConfig.class);
         System.out.println(props.token());
         System.out.println(props.url());
     }

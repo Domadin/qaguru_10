@@ -1,4 +1,4 @@
-package properties;
+package configs;
 
 import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.LoadPolicy;
@@ -12,7 +12,7 @@ import static org.aeonbits.owner.Config.LoadType.MERGE;
 @Sources({"classpath:api.properties",
         "system:properties",
         "file:~/secret_token"})
-public interface ApiProperties extends Config {
+public interface ApiConfig extends Config {
 
     @Key("api.url")
     URL url();
